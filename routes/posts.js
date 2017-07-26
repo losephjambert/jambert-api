@@ -1,9 +1,10 @@
 const contentful = require('contentful');
+const config = require("./contentful.js");
 
 module.exports = function(req, res) {
   const client = contentful.createClient({
-    space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN
+    space: process.env.SPACE_ID || config.space,
+    accessToken: process.env.ACCESS_TOKEN || config.accessToken
   })
   client.getEntries(client.accessToken)
   .then(function (entries) {
