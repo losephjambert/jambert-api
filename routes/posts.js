@@ -1,5 +1,5 @@
 const contentful = require('contentful');
-const config = require("./contentful.js");
+const config = require("./.config/contentful.js");
 
 module.exports = function(req, res) {
   const client = contentful.createClient({
