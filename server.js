@@ -27,6 +27,7 @@ router.use(function(req, res, next) {
 });
 
 router.get('/posts', require('./routes/posts'));
+router.get('/project', require('./routes/project'));
 
 // REGISTER ROUTES
 app.use('', router);
