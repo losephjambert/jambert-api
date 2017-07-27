@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 // SET PORT
 const port = process.env.PORT || 8080;
 
 // USE BODYPARSER I GUESS
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
+// app.use(bodyParser.json());
 
 // SET ACCESS CONTROL HEADERS FOR DEV
 app.use(function(req, res, next) {
