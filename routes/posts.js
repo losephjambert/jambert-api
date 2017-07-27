@@ -1,10 +1,9 @@
 const contentful = require('contentful');
-const config = require("../.config/contentful.js");
 
 module.exports = function(req, res) {
   const client = contentful.createClient({
-    space: process.env.SPACE_ID || config.space,
-    accessToken: process.env.ACCESS_TOKEN || config.accessToken
+    space: process.env.SPACE_ID
+    accessToken: process.env.ACCESS_TOKEN
   })
 
   client.getEntries({content_type: 'blogPost'})
