@@ -34,4 +34,4 @@ app.use('', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Magic happens on port ' + port);
+console.log(`💅 Tune your station to 👉 ${port}`);
